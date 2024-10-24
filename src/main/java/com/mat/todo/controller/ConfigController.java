@@ -23,6 +23,6 @@ public class ConfigController {
 
     @GetMapping("myProp")
     public boolean getProp() {
-        return myProp.isAllowMultipleTasks();
+        return myProp.getTemplate().isAllowMultipleTasks();
     }
 }
