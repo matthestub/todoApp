@@ -20,7 +20,7 @@ public class Task {
     private Audit audit = new Audit();
     @ManyToOne
     @JoinColumn(name = "tasks_group_id")
-    private TasksGroup group;
+    private TaskGroup group;
 
     public Task() {
     }
@@ -57,7 +57,7 @@ public class Task {
         this.dueDate = dueDate;
     }
 
-    TasksGroup getGroup() {
+    TaskGroup getGroup() {
         return group;
     }
 

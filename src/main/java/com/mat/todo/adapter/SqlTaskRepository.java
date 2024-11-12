@@ -1,5 +1,7 @@
-package com.mat.todo.model;
+package com.mat.todo.adapter;
 
+import com.mat.todo.model.Task;
+import com.mat.todo.model.TaskRepository;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.query.Param;
