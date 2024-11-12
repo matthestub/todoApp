@@ -6,8 +6,8 @@ import jakarta.validation.constraints.NotBlank;
 import java.util.Set;
 
 @Entity
-@Table(name = "tasks_group")
-public class TasksGroup {
+@Table(name = "task_groups")
+public class TaskGroup {
 
     @Id
     private int id;
@@ -17,7 +17,7 @@ public class TasksGroup {
     @OneToMany(cascade = CascadeType.ALL, mappedBy = "group")
     private Set<Task> tasks;
 
-    public TasksGroup() {
+    public TaskGroup() {
     }
 
     int getId() {
