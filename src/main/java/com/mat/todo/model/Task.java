@@ -25,6 +25,11 @@ public class Task {
     public Task() {
     }
 
+    public Task(String description, LocalDateTime dueDate) {
+        this.description = description;
+        this.dueDate = dueDate;
+    }
+
     public int getId() {
         return id;
     }

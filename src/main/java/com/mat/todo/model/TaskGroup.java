@@ -16,6 +16,9 @@ public class TaskGroup {
     private boolean completed;
     @OneToMany(cascade = CascadeType.ALL, mappedBy = "group")
     private Set<Task> tasks;
+    @ManyToOne
+    @JoinColumn(name = "project_id")
+    private Project project;
 
     public TaskGroup() {
     }
@@ -28,11 +31,11 @@ public class TaskGroup {
         this.id = id;
     }
 
-    String getTitle() {
+    public String getTitle() {
         return title;
     }
 
-    void setTitle(String title) {
+    public void setTitle(String title) {
         this.title = title;
     }
 
@@ -44,7 +47,19 @@ public class TaskGroup {
         this.completed = completed;
     }
 
-    Set<Task> getTasks() {
+    public Set<Task> getTasks() {
         return tasks;
+    }
+
+    public void setTasks(final Set<Task> tasks) {
+        this.tasks = tasks;
+    }
+
+    Project getProject() {
+        return project;
+    }
+
+    void setProject(final Project project) {
+        this.project = project;
     }
 }
